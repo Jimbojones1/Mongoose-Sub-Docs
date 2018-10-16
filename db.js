@@ -8,7 +8,7 @@ const connectionString = 'mongodb://localhost/test';
 // /test this is what we are calling our database, a db called test
 // is automatically created when we connect
 
-mongoose.connect(connectionString);
+mongoose.connect(connectionString, { useNewUrlParser: true });
 
 mongoose.connection.on('connected', () => {
   console.log(`Mongoose connected to ${connectionString}`);
